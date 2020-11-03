@@ -1,0 +1,61 @@
+body {
+  background-color: rgb(45, 34, 139);
+}
+
+h1 {
+  font-size: 5em;
+  text-align: center;
+  color: ghostwhite;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 15px solid black;
+  
+  /* position: relative; */
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  animation-duration: 2s;
+  animation-name: circle;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes  circle {
+  0% {border-color: red; transform: scale(1);}
+  25% {border-color: gold; transform: scale(2.1);}
+  50% {border-color: lime; transform: scale(1.3);}
+  75% {border-color: dodgerblue; transform: scale(1.1);}
+  100% {border-color: purple; transform: scale(1);}
+
+}
+
+#square {
+  border: 5px solid red;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  animation-name: square;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes square {
+  0% {transform: rotate(0deg)}
+  25% {border-color: aqua; border-width: 10px;}
+  50% {border-color: coral; border-width: 20px;}
+  75% {border-color: yellow; border-width: 40px;}
+  100% {transform: rotate(360deg) ; border-width: 5px;}
+}
